@@ -1,0 +1,71 @@
+$color-purple-1:#4B3F72;
+$color-white-1:#EAF6FF;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    background-color: $color-purple-1;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.5rem;
+
+    &-search{
+        width: 25%;
+        min-width: 25rem;
+        padding: 1rem;
+        background-color: rgba($color: $color-white-1, $alpha: .3);
+        border-radius: 1.5rem;
+        cursor: pointer;
+        transition: all .4s;
+
+        &:hover{
+            background-color: rgba($color: $color-white-1, $alpha: .5);
+        }
+
+    }
+
+    &-icon{
+        width: 2rem;
+        height: 2rem;
+        transform: translateX(-3rem);
+        background-color: transparent;
+        fill: $color-purple-1;
+        cursor: pointer;
+
+        &:hover{
+            .nav-search{
+
+                //check why the style is not being applied
+                background-color: rgba($color: $color-white-1, $alpha: .5);
+            }
+        }
+    }
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   
+}
+
+.movie_box{
+    
+}
+

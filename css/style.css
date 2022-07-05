@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  background-color: #4B3F72; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  flex-direction: column; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem; }
+  .nav-search {
+    width: 25%;
+    min-width: 25rem;
+    padding: 1rem;
+    background-color: rgba(234, 246, 255, 0.3);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all .4s; }
+    .nav-search:hover {
+      background-color: rgba(234, 246, 255, 0.5); }
+  .nav-icon {
+    width: 2rem;
+    height: 2rem;
+    transform: translateX(-3rem);
+    background-color: transparent;
+    fill: #4B3F72;
+    cursor: pointer; }
+    .nav-icon:hover .nav-search {
+      background-color: rgba(234, 246, 255, 0.5); }
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); }
