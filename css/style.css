@@ -14,30 +14,42 @@ body {
   display: flex;
   flex-direction: column; }
 
-.nav {
+.nav form {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 1.5rem; }
-  .nav-search {
-    width: 25%;
-    min-width: 25rem;
-    padding: 1rem;
-    background-color: rgba(234, 246, 255, 0.3);
-    border-radius: 1.5rem;
-    cursor: pointer;
-    transition: all .4s; }
-    .nav-search:hover {
-      background-color: rgba(234, 246, 255, 0.5); }
-  .nav-icon {
-    width: 2rem;
-    height: 2rem;
+  .nav form button {
+    position: relative;
+    border: none;
     transform: translateX(-3rem);
     background-color: transparent;
-    fill: #4B3F72;
-    cursor: pointer; }
-    .nav-icon:hover .nav-search {
-      background-color: rgba(234, 246, 255, 0.5); }
+    z-index: 1; }
+
+.nav-search {
+  width: 25%;
+  min-width: 25rem;
+  padding: 1rem;
+  background-color: rgba(234, 246, 255, 0.3);
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all .4s; }
+  .nav-search:hover, .nav-search:focus {
+    outline: none;
+    background-color: rgba(234, 246, 255, 0.5); }
+
+.nav-icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  z-index: 2;
+  fill: #4B3F72;
+  background-color: transparent;
+  cursor: pointer;
+  display: block; }
+  .nav-icon:hover .nav-search {
+    background-color: rgba(234, 246, 255, 0.5); }
 
 .main {
   display: grid;
